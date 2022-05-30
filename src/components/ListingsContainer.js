@@ -3,7 +3,7 @@ import ListingCard from "./ListingCard";
 
 function ListingsContainer({listings, setListings}) {
   const cards = listings.map((listing)=>
-    <ListingCard id={listing.id} description={listing.description} image={listing.image} location={listing.location} />)
+    <ListingCard key={listing.id} description={listing.description} image={listing.image} location={listing.location} />)
   return (
     <main>
       <ul className="cards">
