@@ -13,7 +13,7 @@ function App() {
   
   return (
     <div className="app">
-      <Header listings={listings}/>
+      <Header listings={listings} setListings={setListings}/>
       <ListingsContainer listings ={listings} setListings={setListings}/>
     </div>
   );

@@ -3,10 +3,9 @@ import ListingCard from "./ListingCard";
 
 function ListingsContainer({listings, setListings}) {
   const cards = listings.map((listing)=>
-    <ListingCard key={listing.key} id={listing.id}deleteListing={deleteListing} description={listing.description} image={listing.image} location={listing.location} />)
+    <ListingCard key={listing.id} id={listing.id}deleteListing={deleteListing} description={listing.description} image={listing.image} location={listing.location} />)
 
   function deleteListing(id){
-    console.log(id)
     fetch(`http://localhost:6001/listings/${id}`, {
       method:'DELETE',
     })
